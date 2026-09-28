@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OFFICIAL_ROBIN1M</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">OFFICIAL_ROBIN1M</div><nav><a href="#home">Home</a><a href="#packages">Packages</a><a href="#orders">Orders</a><a href="#support">Support</a><button onclick="openAdmin()">Admin</button></nav></header>
+<main>
+<section id="home" class="hero"><div><span class="tag">OFFICIAL PLATFORM</span><h1>OFFICIAL_ROBIN1M</h1><p>Simple, fast and customizable order platform.</p><a class="btn" href="#packages">View Packages</a></div></section>
+<section id="packages"><h2>Packages</h2><div id="packageGrid" class="grid"></div></section>
+<section id="orders"><h2>My Orders</h2><div id="orderList" class="orders"></div></section>
+<section id="support"><h2>Support</h2><div class="card"><p>For support, contact the administrator.</p><button class="btn" onclick="alert('Add your WhatsApp/Telegram link in script.js')">Contact Support</button></div></section>
+</main>
+<footer>© <span id="year"></span> OFFICIAL_ROBIN1M</footer>
+
+<div id="modal" class="modal hidden"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><h3 id="modalTitle">Place Order</h3><label>Customer / Game ID<input id="customerId" placeholder="Enter ID"></label><label>Payment reference<input id="paymentRef" placeholder="UPI transaction/reference ID"></label><p class="upi">UPI: <b>8006485383-2@ybl</b></p><button class="btn" onclick="submitOrder()">Submit Order</button></div></div>
+
+<div id="admin" class="modal hidden"><div class="modalbox"><button class="close" onclick="closeAdmin()">×</button><h3>Admin Panel</h3><label>Admin password<input id="adminPass" type="password"></label><button class="btn" onclick="loginAdmin()">Login</button><div id="adminPanel" class="hidden"><h4>Packages</h4><div id="adminPackages"></div><button class="btn secondary" onclick="addPackage()">+ Add Package</button><h4>Orders</h4><div id="adminOrders"></div></div></div></div>
+<script src="script.js"></script>
+</body></html>
